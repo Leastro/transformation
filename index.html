@@ -1,0 +1,45 @@
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script type = "text/javascript" src="/transformation.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="mapping">
+        <!-- 좌표를 그리기 위한 캔버스. width, height 부분은 해상도를 의미한다.
+         영역크기는 css에서 조절 -->
+        <canvas id="xyPlane" width="800" height="600"></canvas>
+    </div>
+    <div id="controll">
+        <div class="block">
+            <a class="title">정의 좌표</a>
+            <a class="box" id="show_xy"></a>
+        </div>
+        <div class="block">
+            <a class="title">이동</a>
+            <a class="box">
+                <span>x: <input type="number" id="move_x" value="0"></input></span>
+                <span>y: <input type="number" id="move_y" value="0"></input></span>
+            </a>
+        </div>
+        <div class="block">
+            <a class="title">회전</a>
+            <a class="box">
+                <span>각도: <input type="number" id="angle" value="0"></input></span>
+            </a>
+        </div>
+        <div class="block">
+            <a class="title">원점 변경</a>
+            <a class="box">
+                <span> x: <text id="default_x">0</text></span>
+                <span> y: <text id="default_y">0</text></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* 기본 폰트 */
+@font-face {
+    font-family: 'NotoSansKR-Black';
+    src: url('/fonts/NotoSansKR-Black.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-Bold';
+    src: url('/fonts/NotoSansKR-Bold.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-ExtraBold';
+    src: url('/fonts/NotoSansKR-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-ExtraLight';
+    src: url('/fonts/NotoSansKR-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-Light';
+    src: url('/fonts/NotoSansKR-Light.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-Medium';
+    src: url('/fonts/NotoSansKR-Medium.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-Regular';
+    src: url('/fonts/NotoSansKR-Regular.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-SemiBold';
+    src: url('/fonts/NotoSansKR-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'NotoSansKR-Thin';
+    src: url('/fonts/NotoSansKR-Thin.ttf');
+}
+
+body {
+    font-family: 'NotoSansKR-Regular';
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* 캔버스 영역 */
+#mapping {
+    position:relative;
+    width: auto;
+    height: 500px;
+}
+#xyPlane {
+    width:98%;
+    height:100%;
+}
+
+/* 콘트롤러 영역 */
+#controll {
+    position: relative;
+    width: 200px;
+    height: max-content;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.title{
+    font-family: 'NotoSansKR-SemiBold';
+}
+
+.box{
+    display: block;
+    padding: 10px;
+    border: solid 1px;
+    border-radius : 5px;
+}
+.box>span {
+    display: flex;
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+.box>span>input {
+    margin-left: 5px;
+    width: 78%;
+}
+#move_x {
+    margin-bottom: 5px;
+    width: 100%;
+}
+#move_y {
+    width: 100%;
+}
