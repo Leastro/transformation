@@ -34,16 +34,18 @@ $(function() {
     
     // 눈금 그리기
     function drawTicks() {
-      const spacing = 25; // 눈금 간격
+      const spacing = 50; // 눈금 간격
     
       // X축 눈금
       for (let x = originX; x < width; x += spacing) { // 양수 부분
         ctx.beginPath(); // 경로 시작
+        /* 눈금 선 그리기 start*/
         ctx.moveTo(x, originY - 5);
         ctx.lineTo(x, originY + 5);
+        /* 눈금 선 그리기 end*/
         ctx.stroke(); // 선을 그림
         if (x !== originX) {
-            ctx.fillText((x - originX) / spacing, x + 2, originY + 15); // 눈금 숫자 적기
+            ctx.fillText(x - originX, x + 2, originY + 15); // 눈금 숫자 적기
         }
         ctx.closePath(); // 경로 닫기
       }
@@ -52,7 +54,7 @@ $(function() {
         ctx.moveTo(x, originY - 5);
         ctx.lineTo(x, originY + 5);
         ctx.stroke(); // 선을 그림
-        ctx.fillText((x - originX) / spacing, x + 2, originY + 15); // 눈금 숫자 적기
+        ctx.fillText(x - originX, x + 2, originY + 15); // 눈금 숫자 적기
         ctx.closePath(); // 경로 닫기
       }
     
@@ -63,7 +65,7 @@ $(function() {
         ctx.lineTo(originX + 5, y);
         ctx.stroke(); // 선을 그림
         if (y !== originY) {
-            ctx.fillText((originY - y) / spacing, originX + 8, y + 4); // 눈금 숫자 적기
+            ctx.fillText(originY - y, originX + 8, y + 4); // 눈금 숫자 적기
         }
         ctx.closePath(); // 경로 닫기
       }
@@ -72,7 +74,7 @@ $(function() {
         ctx.moveTo(originX - 5, y);
         ctx.lineTo(originX + 5, y);
         ctx.stroke(); // 선을 그림
-        ctx.fillText((originY - y) / spacing, originX + 8, y + 4); // 눈금 숫자 적기
+        ctx.fillText(originY - y, originX + 8, y + 4); // 눈금 숫자 적기
         ctx.closePath(); // 경로 닫기
       }
     }
