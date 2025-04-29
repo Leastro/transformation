@@ -103,8 +103,6 @@ $(function() {
         //정의 좌표에 좌표 입력하기
         var strhtml = "";
 
-        console.log(originX)
-        console.log(originY)
         strhtml += "<span> 1. left-top : 0 / 100</span>";
         strhtml += "<span> 2. right-top : 100 / 100</span>";
         strhtml += "<span> 3. right-bottom : 100 / 0</span>";
