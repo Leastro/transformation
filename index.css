@@ -57,7 +57,7 @@ body {
 /* 콘트롤러 영역 */
 #controll {
     position: relative;
-    width: 200px;
+    width: auto;
     height: max-content;
     border: solid 1px;
     border-radius: 5px;
@@ -82,10 +82,10 @@ body {
     margin-left: 5px;
     width: 78%;
 }
-#move_x {
+#move_x, #default_x {
     margin-bottom: 5px;
     width: 100%;
 }
-#move_y {
+#move_y, #default_y {
     width: 100%;
 }

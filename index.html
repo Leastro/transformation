@@ -23,21 +23,21 @@
         <div class="block">
             <a class="title">이동</a>
             <a class="box">
-                <span>x: <input type="number" id="move_x" value="0"></input></span>
-                <span>y: <input type="number" id="move_y" value="0"></input></span>
+                <span>x: <input type="number" id="move_x" value="0" onchange="changeXY('x',this.value)" onFocus="javascript:this.value=''" onblur="if (this.value === '') { this.value = 0; changeXY('x',0); }"></input></span>
+                <span>y: <input type="number" id="move_y" value="0" onchange="changeXY('y',this.value)" onFocus="javascript:this.value=''" onblur="if (this.value === '') { this.value = 0; changeXY('y',0); }"></input></span>
             </a>
         </div>
         <div class="block">
             <a class="title">회전</a>
             <a class="box">
-                <span>각도: <input type="number" id="angle" value="0"></input></span>
+                <span>각도: <input type="number" id="angle" value="0" onchange="turnQuadrangle(this.value)" onFocus="javascript:this.value=''" onblur="if (this.value === '') { this.value = 0; turnQuadrangle(0); }"></input></span>
             </a>
         </div>
         <div class="block">
             <a class="title">원점 변경</a>
             <a class="box">
-                <span> x: <text id="default_x">0</text></span>
-                <span> y: <text id="default_y">0</text></span>
+                <span> x: <input type="number" id="default_x" value="0" onchange="defaultSetXY('x',this.value)" onFocus="javascript:this.value=''" onblur="if (this.value === '') { this.value = 0; defaultSetXY('x',0);}"></input></span>
+                <span> y: <input type="number" id="default_y" value="0" onchange="defaultSetXY('y',this.value)" onFocus="javascript:this.value=''" onblur="if (this.value === '') { this.value = 0; defaultSetXY('y',0);}"></input></span>
             </a>
         </div>
     </div>
